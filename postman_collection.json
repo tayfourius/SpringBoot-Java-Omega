@@ -1,0 +1,531 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Assadi_Project",
+		"_postman_id": "4fa289e9-2c70-6e6d-4cbb-ff6ed769bd36",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "restaurant",
+			"description": "",
+			"item": [
+				{
+					"name": "Create Restaurant - Admin",
+					"request": {
+						"url": "localhost:8765/restaurants-service/restaurant/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"test\",\n\t\"location\": \"somewhere\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Restaurant - User",
+					"request": {
+						"url": "localhost:8765/restaurants-service/restaurant/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "user",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "user",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"test\",\n\t\"location\": \"somewhere\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Restaurant 1 - User",
+					"request": {
+						"url": "localhost:8765/restaurants-service/restaurant/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "user",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "user",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"test\",\n\t\"location\": \"somewhere\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "login",
+			"description": "",
+			"item": [
+				{
+					"name": "GET Users",
+					"request": {
+						"url": "localhost:8765/login-service/user/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\t\"username\":\"admin\",\n\t\"password\":\"admin\",\n\t\"role\":\"admin\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET User",
+					"request": {
+						"url": "localhost:8765/login-service/user/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\t\"username\":\"admin\",\n\t\"password\":\"admin\",\n\t\"role\":\"admin\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add User",
+					"request": {
+						"url": "localhost:8765/login-service/user/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\t\"username\":\"1\",\n\t\"password\":\"1\",\n\t\"role\":\"user\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "menu",
+			"description": "",
+			"item": [
+				{
+					"name": "GET menu",
+					"request": {
+						"url": "localhost:8765/menu-service/restaurant/1/menu/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\t\"username\":\"admin\",\n\t\"password\":\"admin\",\n\t\"role\":\"admin\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post menu",
+					"request": {
+						"url": "localhost:8765/menu-service/restaurant/menu/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n        \"name\": \"test\",\n        \"restaurantId\": 2,\n        \"price\": 1234\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET menu 1",
+					"request": {
+						"url": "localhost:8765/menu-service/restaurant/menu/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n        \"name\": \"test\",\n        \"restaurantId\": 2,\n        \"price\": 1234\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"description": "",
+			"item": [
+				{
+					"name": "create order",
+					"request": {
+						"url": "http://localhost:8765/order-service/order",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "user",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "user",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\":\"4\",\n\t\"userId\":1,\n\t\"restaurantId\":2,\n\t\"menu\":[\n\t\t{\n\t\t\t\"name\":\"food\",\n\t\t\t\"quantity\":5\n\t\t},{\n\t\t\t\"name\":\"food\",\n\t\t\t\"quantity\":5\n\t\t}\n\t]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get order user",
+					"request": {
+						"url": "http://localhost:8765/order-service/order/user/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "user",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "user",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\":\"4\",\n\t\"userId\":1,\n\t\"restaurantId\":2,\n\t\"menu\":[\n\t\t{\n\t\t\t\"name\":\"food\",\n\t\t\t\"quantity\":5\n\t\t},{\n\t\t\t\"name\":\"food\",\n\t\t\t\"quantity\":5\n\t\t}\n\t]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get order restaurant",
+					"request": {
+						"url": "http://localhost:8765/order-service/order/restaurant/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "restaurant",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "restaurant",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"orderId\":\"4\",\n\t\"userId\":1,\n\t\"restaurantId\":2,\n\t\"menu\":[\n\t\t{\n\t\t\t\"name\":\"food\",\n\t\t\t\"quantity\":5\n\t\t},{\n\t\t\t\"name\":\"food\",\n\t\t\t\"quantity\":5\n\t\t}\n\t]\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "bank",
+			"description": "",
+			"item": [
+				{
+					"name": "Post bank",
+					"request": {
+						"url": "localhost:8765/bank-service/bank",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n        \"username\": \"test2\",\n        \"account\": \"12345\",\n        \"ammout\": 1234\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get banks",
+					"request": {
+						"url": "localhost:8765/bank-service/bank",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n        \"username\": \"test2\",\n        \"account\": \"12345\",\n        \"ammout\": 1234\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get account",
+					"request": {
+						"url": "localhost:8765/bank-service/bank/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n        \"username\": \"test2\",\n        \"account\": \"12345\",\n        \"ammout\": 1234\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "check amount account",
+					"request": {
+						"url": "localhost:8765/bank-service/bank/1/price/50",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n        \"username\": \"test2\",\n        \"account\": \"12345\",\n        \"ammout\": 1234\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "send money",
+					"request": {
+						"url": "localhost:8765/bank-service/bank/1/restaurant/2/amount/100",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "username",
+								"value": "admin",
+								"description": ""
+							},
+							{
+								"key": "password",
+								"value": "admin",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n        \"username\": \"test2\",\n        \"account\": \"12345\",\n        \"ammout\": 1234\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

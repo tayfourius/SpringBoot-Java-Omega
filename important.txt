@@ -1,0 +1,19 @@
+SET RABBIT_URI=amqp://localhost java -jar zipkin-server-2.11.12-exec.jar
+
+
+RABBITMQ:
+http://www.erlang.org/downloads
+https://www.rabbitmq.com/install-windows.html
+
+ZIPKIN:
+https://zipkin.io/pages/quickstart.html
+http://localhost:9411/zipkin/
+
+Eureka:
+http://localhost:8761/
+
+
+Git:
+git init
+git add -A
+git commit -m "add system"
